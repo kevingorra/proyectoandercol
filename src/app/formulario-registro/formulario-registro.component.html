@@ -1,0 +1,199 @@
+
+
+
+  <form  [formGroup]="formulario" (ngSubmit)="analizarFormulario()">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8">
+    
+    
+              <div class="row">
+                <div class="col-12">
+                  <h1>Registro de mercancia</h1>
+                  <hr>
+    
+                </div>
+            </div>
+              <div class="mb-3">
+                <label class="form-label">IUP :</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-upc-scan"></i></span>
+                  <input type="text" class="form-control" placeholder="Codigo de Barras" formControlName="iup"(blur)="buscarMercancia()">
+                </div>
+                <div *ngIf="formulario.get('iup')?.touched && formulario.get('iup')?.errors?.['required']" class="form-text text-danger fw-bold">Este campo es obligatorio</div>
+                <div *ngIf="formulario.get('iup')?.touched && formulario.get('iup')?.errors?.['minlength']"  class="form-text text-danger fw-bold">Este campo debe tener al menos 6 caracteres</div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Descripcion Mercancia :</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-box-seam"></i></span>
+                  <input type="text" class="form-control" placeholder="Nombre Mercancia" formControlName="nombre">
+                </div>
+                
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-boxes"></i></span>
+                    <input type="text" class="form-control" placeholder="Volumen" formControlName="volumen">
+                  </div>
+
+                </div>
+                <div class="col-6">
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-pin-map-fill"></i></span>
+                    <input type="text" class="form-control" placeholder="Ubicacion" formControlName="ubicacion">
+                  </div>
+
+                </div>
+              </div>
+
+
+              
+
+
+    
+    
+              <div class="mb-3">
+                <label class="form-label bold">Remitente :</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
+                  <input type="text" class="form-control" placeholder="Nombre Remitente" formControlName="nombreRemitente">
+                </div>
+    
+    
+              </div>
+    
+    
+    
+              <div class="row">
+                <div class="col-6">
+    
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
+                    <input type="text" class="form-control" placeholder="Identificacion" formControlName="idRemitente">
+                  </div>
+                  
+    
+                </div>
+                <div class="col-6">
+    
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-bounding-box"></i></span>
+                    <input type="text" class="form-control" placeholder="Tipo Cliente" formControlName="tipoRemitente">
+                  </div>
+             
+    
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+    
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-building"></i></span>
+                    <input type="text" class="form-control" placeholder="Municipio " formControlName="municipioRemitente">
+                  </div>
+    
+                </div>
+                <div class="col-6">
+    
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
+                    <input type="text" class="form-control" placeholder="Departamento" formControlName="deptoRemitente">
+                  </div>
+    
+    
+                </div>
+              </div>
+    
+              <div class="mb-5 my-3">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-geo-alt-fill"></i></span>
+                  <input type="text" class="form-control" placeholder="Direccion" formControlName="direccionRemitente">
+                </div>
+             
+              </div>
+              <div class="mb-3">
+                <label class="form-label bold">Destinatario :</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
+                  <input type="text" class="form-control" placeholder="Nombre Destinatario" formControlName="nombreDestinatario">
+                </div>
+    
+    
+              </div>
+    
+    
+    
+              <div class="row">
+                <div class="col-6">
+    
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
+                    <input type="text" class="form-control" placeholder="Identificacion" formControlName="idDestinatario">
+                  </div>
+                  
+                </div>
+                <div class="col-6">
+    
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-bounding-box"></i></span>
+                    <input type="text" class="form-control" placeholder="Tipo De Cliente" formControlName="tipoDestinatario">
+    
+                  </div>
+                  
+    
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-building"></i></span>
+                    <input type="text" class="form-control" placeholder="Municipio" formControlName="municipioDestinatario">
+                  </div>
+                
+                </div>
+                <div class="col-6">
+    
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
+                    <input type="text" class="form-control" placeholder="Departamento" formControlName="deptoDestinatario">
+                  </div>
+    
+    
+    
+                </div>
+              </div>
+    
+              <div class="mb-5 my-3">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-geo-alt-fill"></i></span>
+                  <input type="text" class="form-control" placeholder="Direccion" formControlName="direccionDestinatario">
+                </div>
+               
+              </div>
+    
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example" *ngIf="controlDeZona" formControlName="zona">
+                  
+                  <option value={{zona.id}} *ngFor="let zona of datosZonas">{{zona.nombre}}</option>
+    
+    
+    
+                </select>
+    
+    
+              </div>
+    
+              <button  type="submit"  class="btn btn-warning w-100">Registrar</button>
+    
+    
+        </div>
+      </div>
+    </div>
+    </form>

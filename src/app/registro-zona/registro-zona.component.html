@@ -1,0 +1,22 @@
+<form  [formGroup]="formulario" (ngSubmit)="analizarFormulario()">
+
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="bi bi-boxes"></i></span>
+        <input type="text" class="form-control" placeholder="Nombre Zona" formControlName="nombre">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar2-week"></i></span>
+        <input type="text" class="form-control" placeholder="Capacidad" formControlName="disponible">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-check"></i></span>
+        <input type="text" class="form-control" placeholder="Volumen" formControlName="capacidad">
+      </div>
+
+
+      <button type="submit" class="btn btn-warning mx-auto d-block w-100">Registrar</button>
+
+</form>

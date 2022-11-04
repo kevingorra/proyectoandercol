@@ -1,0 +1,20 @@
+
+   /* Modify the background color */
+         
+   .navbar-custom {
+    background-color:#144789;
+}
+/* Modify brand and text color */
+ 
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgb(255, 255, 255);
+}
+.colorblanco{
+  color: #fff;
+  
+}
+.tamañoimg{
+  height: 70px;
+  width: 100px;
+}

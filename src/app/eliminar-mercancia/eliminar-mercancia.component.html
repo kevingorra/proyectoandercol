@@ -1,0 +1,77 @@
+<app-menu></app-menu>
+<br><br><br><br><br>
+<div class="text-center"><h1>Relacion de Mercancias en Cuarto De Soluciones</h1></div>
+<br><br>
+
+
+
+
+<div class="row">
+    <div class="col-7 mx-2">
+
+        <div *ngFor="let dato of datosZonas">
+            <div *ngFor="let mercancia of dato.mercancias">
+                <div class="container my-5">
+
+                    
+       
+                    <table class="table tablas ">
+                  
+                          <tr class="text-center">
+                            <th class="border colorAzul" colspan="4" scope="col">Descripcion Mercancia : {{dato.nombre}} </th>
+                            <th class="border colorAzul" colspan="3" scope="col">Datos Remitente</th>
+                            <th class="border colorAzul" colspan="3" scope="col">Datos Destinatario</th>
+                            <th class="border " rowspan="3">  <button (click)="retirarMercancia(mercancia.iup)" type="button" class="btn-close "  aria-label="Close"></button></th>   
+                            
+                          </tr>
+                          <tr>
+                            <th class="border" scope="col">IUP</th>
+                            <th class="border" scope="col">Nombre</th>
+                            <th class="border" scope="col">Volumen(u3)</th>
+                            <th class="border" scope="col">Ubicacion</th>
+                            <th class="border" scope="col">Nombre</th>
+                            <th class="border" scope="col">Cedula</th>
+                            <th class="border" scope="col">Ciudad</th>
+                            <th class="border" scope="col">Nombre</th>
+                            <th class="border" scope="col">Cedula</th>
+                            <th class="border" scope="col">Ciudad</th>
+                          
+                            
+                            
+                          </tr>
+                       
+                       
+                          <tr class="border ">
+                            <th class="border " scope="row">{{mercancia.iup}}</th>
+                            <td class="border">{{mercancia.nombre}}</td>
+                            <td class="border">{{mercancia.volumen}}</td>
+                            <td class="border">{{mercancia.ubicacion}}</td>
+                            <td class="border">{{mercancia.nombreRemitente}}</td>
+                            <td class="border">{{mercancia.idRemitente}}</td>
+                            <td class="border">{{mercancia.municipioRemitente}}</td>
+                            <td class="border">{{mercancia.nombreDestinatario}}</td>
+                            <td class="border">{{mercancia.idDestinatario}}</td>
+                            <td class="border">{{mercancia.municipioDestinatario}}</td>
+        
+                          </tr>
+                        
+                        
+                      </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-4 mx-5">
+        <h3>Volumen Disponible</h3>
+        <br>
+        <div class="card shadow ">
+             <app-grafica></app-grafica>
+        </div>
+       
+    </div>
+    
+</div>
+
+<app-footer></app-footer>

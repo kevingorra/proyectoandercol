@@ -1,0 +1,47 @@
+<nav class="navbar navbar-custom fixed-top">
+  <div class="container-fluid ">
+
+    <a class="navbar-brand mx-3 text-center" href="#">Proyecto Estado Financiero Clientes</a>
+  
+<!--    
+    <button class="navbar-toggler colorblanco" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon  nav-link active"></span>
+    </button> -->
+    <button type="button" class="btn btn-light"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">Menu
+      <span class="navbar-toggler-icon  nav-link active"></span> 
+    </button>
+
+    
+    <div class="offcanvas offcanvas-start navbar-custom navbar-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header colorblanco">
+        <br><br>
+        <h1 class=" navbar-dark " id="offcanvasNavbarLabel">Estado Clientes</h1>
+        <br><br><br><br>
+        <button style="background-color: white;" type="button" class="btn-close colorblanco" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/inicio" ><h3><i class="bi bi-house-fill"></i> Inicio</h3> </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/mercancia"><h3><i class="bi bi-person-plus-fill"></i> Registrar Informacion Clientes     (Formulario)</h3> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/buscar"><h3><i class="bi bi-zoom-in"></i> Buscar Informacion por cliente</h3> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/eliminar"><h3><i class="bi bi-person-x-fill"></i> Base de Datos Clientes </h3> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/zona"><h3><i class="bi bi-box"></i>  Formulario Andercol Clientes </h3> </a>
+          </li>
+        </ul>
+        <div class="card navbar-custom shadow mx-3 my-5" style="width: 20rem;">
+          <img src="../../../assets/img/graficaMenu1.png" class="card-img-top" alt="...">
+        </div>
+     
+      </div>
+    </div>
+  </div>
+</nav>

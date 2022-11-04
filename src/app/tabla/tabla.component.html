@@ -1,0 +1,93 @@
+<div class="container my-5 mx-5">
+
+    <form  [formGroup]="formulario" (ngSubmit)="analizarFormulario()" >
+
+        <label class="form-label">IUP :</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-upc-scan"></i></span>
+          <input type="text" class="form-control" placeholder="Codigo de Barras" formControlName="iup"(blur)="buscarMercancia()">
+        </div>
+
+    <table class="table table-bordered  ">
+     
+      <tbody>
+        <tr>
+          <th scope="row " style="width: 80px;">Descripcion Mercancia:</th>
+          <td ><input class="form-control" formControlName="nombre"  type="text"  readonly="readonly" /></td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Volumen:</th>
+          <td ><input class="form-control" formControlName="volumen"  type="text"  readonly="readonly" /></td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Ubicacion:</th>
+          <td ><input class="form-control" formControlName="ubicacion" type="text"  readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+          <th scope="row">Nombre Remitente:</th>
+          <td ><input class="form-control"  type="text" formControlName="nombreRemitente"  readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+          <th scope="row">Cedula Remitente:</th>
+          <td ><input class="form-control" formControlName="idRemitente" type="text"  readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+          <th scope="row">Tipo Remitente:</th>
+          <td ><input class="form-control" formControlName="tipoRemitente"  type="text"  readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+            <th scope="row">Ciudad Remitente:</th>
+            <td ><input class="form-control"  type="text" formControlName="municipioRemitente"  readonly="readonly" /></td>
+           
+          </tr>
+        <tr>
+          <th scope="row">Departamento Remitente:</th>
+          <td  ><input class="form-control" formControlName="deptoRemitente"  type="text"  readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+          <th scope="row">Direccion Remitente:</th>
+          <td ><input class="form-control" formControlName="direccionRemitente"  type="text"  readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+          <th scope="row">Nombre Destinatario:</th>
+          <td ><input class="form-control"  type="text" formControlName="nombreDestinatario"  readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+          <th scope="row">Cedula Destinatario:</th>
+          <td ><input class="form-control"  type="text"  formControlName="idDestinatario" readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+            <th scope="row">Tipo Destinatario:</th>
+            <td ><input class="form-control" formControlName="tipoDestinatario" type="text"  readonly="readonly" /></td>
+           
+          </tr>
+        <tr>
+          <th scope="row">Ciudad Destinatario:</th>
+          <td ><input class="form-control" formControlName="municipioDestinatario"  type="text"  readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+          <th scope="row">Departamento Destinatario:</th>
+          <td ><input class="form-control"  formControlName="deptoDestinatario" type="text"  readonly="readonly" /></td>
+         
+        </tr>
+        <tr>
+          <th scope="row">Direccion Destinatario:</th>
+          <td ><input class="form-control" formControlName="direccionDestinatario" type="text"  readonly="readonly" /></td>
+         
+        </tr>
+     
+      </tbody>
+    </table>
+  </form>
+  </div>
